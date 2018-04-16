@@ -1,0 +1,47 @@
+{% extends "Base.html" %}
+
+{% block Title %}{{act.title}}{% endblock %}
+
+{% block Style %} {% endblock %}
+
+{% block Check%}
+	if(Name.length<=0||studentid.length<=0||phone.length<=0){
+		alert('Please Fill Full The Form!');
+		return -1;
+	}
+{% endblock %}
+
+{% block Js %} {% endblock %}
+
+{% block Subject %}
+	"活动报名"
+{% endblock %}
+
+{% block ToMail %}
+	"{{activity.email}}"
+{% endblock %}
+
+{% block Slider %} {% endblock %}
+
+{% block Main%}
+	<div class="col-md-8 banner-bottom-left">
+ 		<div class="banner-bottom-left-grids">
+ 			<div class="single-left-grid">
+ 				<h3 align="center">{{activity.title}}</h3>
+ 				<p align="center"><img src="{{activity.image}}" alt="" style="width:600px;height:800px" /></p>
+				<h5 style="color:gray;" align="right">{{activity.timestamp}}</h5>
+				<br>
+ 				<p class="text">{% autoescape off %}{{activity.introduction}}{% endautoescape %}</p>
+				<br>
+ 			</div>
+		</div>
+	</div>
+{% endblock %}
+ 
+{% block MailTitle %} 
+	Want to <span class="bold-text">Join in us</span>
+{% endblock %}
+
+{% block Suggest %} {%  endblock %}
+
+				
