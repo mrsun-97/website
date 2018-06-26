@@ -1,2 +1,2 @@
 # website
-Images and Python cache files are ignored.
+Images and Python cache files were ignored.
